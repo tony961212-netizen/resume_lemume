@@ -1,1 +1,22 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>單字查詢</title>
+</head>
+<body>
+    <h1>輸入中或英文單字</h1>
+    <form method="post">
+        <input type="text" name="question" placeholder="例如：apple 或 蘋果" required>
+        <button type="submit">查詢</button>
+    </form>
+
+    {% if question %}
+        <h2>查詢結果：</h2>
+        <p><strong>{{ question }}</strong> → {{ answer }}</p>
+        <a href="/ask">再查一個</a>
+    {% endif %}
+
+    <p><a href="/">回首頁</a></p>
+</body>
+</html>
