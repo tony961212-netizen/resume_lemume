@@ -72,6 +72,19 @@
         <li><a href="/club">🎨 社團經驗</a></li>
         <li><a href="/electives">📚 多元選修課程</a></li>
         <li><a href="/ai">🤖 AI 應用</a></li>
+
+
+    <h1>中英對照字典</h1>
+    <ul>
+        {% for q, a in QA.items() %}
+        <li>{{ q }} = {{ a }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/ask">試著問一個單字 ➜</a>
+</body>
+</html>
+
     </ul>
 </body>
 </html>
+ <!DOCTYPE html>
