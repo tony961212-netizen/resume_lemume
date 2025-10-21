@@ -74,17 +74,6 @@ questions_answers = {
 }
 
 
-
-# ✅ 問答頁面
-@app.route('/ask', methods=['GET', 'POST'])
-def ask_question():
-    if request.method == 'POST':
-        q = request.form['question']
-        # ✅ 加上防呆：如果輸入不存在，顯示提示文字
-        a = questions_answers.get(q, "抱歉，字典裡沒有這個詞。")
-        return render_template('ask.html', question=q, answer=a)
-    return render_template('ask.html', question="", answer="")
-
 # ✅ 主程式啟動
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
