@@ -73,10 +73,7 @@ questions_answers = {
     "難過": "sad"
 }
 
-# ✅ 首頁：顯示整個問答集
-@app.route('/')
-def index():
-    return render_template('index.html', QA=questions_answers)
+
 
 # ✅ 問答頁面
 @app.route('/ask', methods=['GET', 'POST'])
