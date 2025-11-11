@@ -32,10 +32,8 @@ def ai():
     return render_template('ai.html')
 from flask import Flask, render_template, request
 
-# ✅ 這裡要用 __name__ 而不是 name
-app = Flask(__name__)
 
-# ✅ 問答集（中英互譯）
+app = Flask(__name__)
 questions_answers = {
     "蘋果": "apple",
     "apple": "蘋果",
@@ -74,7 +72,6 @@ questions_answers = {
 }
 
 
-# ✅ 主程式啟動
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
 
